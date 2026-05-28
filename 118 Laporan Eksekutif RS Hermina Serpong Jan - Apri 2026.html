@@ -1,0 +1,356 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Portal RS Hermina Serpong</title>
+
+<style>
+
+*{
+  box-sizing:border-box;
+}
+
+body{
+  margin:0;
+  font-family:Arial, sans-serif;
+  background:#021b1b;
+  overflow:hidden;
+}
+
+/* =========================
+   HALAMAN COVER
+========================= */
+
+#home{
+  width:100vw;
+  height:100vh;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  background:#021b1b;
+}
+
+.stage{
+  position:relative;
+
+  width:100vw;
+  height:56.25vw;
+
+  max-height:100vh;
+  max-width:177.78vh;
+}
+
+.stage img{
+  width:100%;
+  height:100%;
+  object-fit:contain;
+  display:block;
+}
+
+/* =========================
+   AREA KLIK MENU
+========================= */
+
+.menu{
+  position:absolute;
+  cursor:pointer;
+  border-radius:18px;
+  z-index:10;
+  transition:0.3s;
+}
+
+.menu:hover{
+  background:rgba(0,255,200,0.18);
+  box-shadow:0 0 25px #00ffc8;
+}
+
+/* =========================
+   POSISI MENU
+========================= */
+
+/* RINGKASAN */
+#btn-ringkasan{
+  left:1.6%;
+  top:69.4%;
+  width:16.4%;
+  height:14%;
+}
+
+/* KEUANGAN */
+#btn-keuangan{
+  left:18.7%;
+  top:69.4%;
+  width:19%;
+  height:14%;
+}
+
+/* IGD */
+#btn-igd{
+  left:38.2%;
+  top:69.4%;
+  width:13%;
+  height:14%;
+}
+
+/* TINDAKAN */
+#btn-tindakan{
+  left:51.8%;
+  top:69.4%;
+  width:15.3%;
+  height:14%;
+}
+
+/* PERSALINAN */
+#btn-persalinan{
+  left:67.8%;
+  top:69.4%;
+  width:15.6%;
+  height:14%;
+}
+
+/* PADMA */
+#btn-padma{
+  left:84.2%;
+  top:69.4%;
+  width:14%;
+  height:14%;
+}
+
+/* =========================
+   HALAMAN SLIDE
+========================= */
+
+.slide-page{
+  display:none;
+  width:100vw;
+  height:100vh;
+  background:#ffffff;
+  overflow:hidden;
+  position:relative;
+}
+
+/* AGAR SLIDE PAS */
+.slide-page img{
+  width:100%;
+  height:100%;
+  object-fit:contain;
+  display:block;
+}
+
+/* =========================
+   TOMBOL KEMBALI
+========================= */
+
+.back{
+  position:fixed;
+  top:18px;
+  left:18px;
+  z-index:999;
+
+  background:#047857;
+  color:white;
+
+  border:none;
+  border-radius:12px;
+
+  padding:14px 24px;
+
+  font-size:17px;
+  font-weight:bold;
+
+  cursor:pointer;
+
+  box-shadow:0 4px 15px rgba(0,0,0,0.25);
+}
+
+.back:hover{
+  background:#065f46;
+}
+
+</style>
+</head>
+
+<body>
+
+<!-- ===================================
+     COVER DEPAN
+=================================== -->
+
+<section id="home">
+
+  <div class="stage">
+
+    <!-- COVER -->
+    <img src="cover-rs-hermina.png">
+
+    <!-- MENU -->
+    <div id="btn-ringkasan"
+    class="menu"
+    onclick="openSlide('ringkasan')"></div>
+
+    <div id="btn-keuangan"
+    class="menu"
+    onclick="openSlide('keuangan')"></div>
+
+    <div id="btn-igd"
+    class="menu"
+    onclick="openSlide('igd')"></div>
+
+    <div id="btn-tindakan"
+    class="menu"
+    onclick="openSlide('tindakan')"></div>
+
+    <div id="btn-persalinan"
+    class="menu"
+    onclick="openSlide('persalinan')"></div>
+
+    <div id="btn-padma"
+    class="menu"
+    onclick="openSlide('padma')"></div>
+
+  </div>
+
+</section>
+
+<!-- ===================================
+     RINGKASAN EKSEKUTIF
+=================================== -->
+
+<section id="ringkasan" class="slide-page">
+
+<button class="back"
+onclick="backHome()">
+← Kembali
+</button>
+
+<img src="RINGKASAN EKSEKUTIF.png">
+
+</section>
+
+<!-- ===================================
+     KINERJA KEUANGAN
+=================================== -->
+
+<section id="keuangan" class="slide-page">
+
+<button class="back"
+onclick="backHome()">
+← Kembali
+</button>
+
+<img src="KINERJA KEUANGAN & ANALISIS PADMA.png">
+
+</section>
+
+<!-- ===================================
+     IGD PADMA
+=================================== -->
+
+<section id="igd" class="slide-page">
+
+<button class="back"
+onclick="backHome()">
+← Kembali
+</button>
+
+<img src="IGD PADMA.png">
+
+</section>
+
+<!-- ===================================
+     TINDAKAN PADMA
+=================================== -->
+
+<section id="tindakan" class="slide-page">
+
+<button class="back"
+onclick="backHome()">
+← Kembali
+</button>
+
+<img src="TINDAKAN PADMA.png">
+
+</section>
+
+<!-- ===================================
+     PERSALINAN PADMA
+=================================== -->
+
+<section id="persalinan" class="slide-page">
+
+<button class="back"
+onclick="backHome()">
+← Kembali
+</button>
+
+<img src="PERSALINAN PADMA.png">
+
+</section>
+
+<!-- ===================================
+     PADMA ANALYSIS
+=================================== -->
+
+<section id="padma" class="slide-page">
+
+<button class="back"
+onclick="backHome()">
+← Kembali
+</button>
+
+<img src="PADMA ANALYSIS.png">
+
+</section>
+
+<!-- ===================================
+     JAVASCRIPT
+=================================== -->
+
+<script>
+
+function openSlide(id){
+
+  document.getElementById("home").style.display = "none";
+
+  const pages = [
+    "ringkasan",
+    "keuangan",
+    "igd",
+    "tindakan",
+    "persalinan",
+    "padma"
+  ];
+
+  pages.forEach(page => {
+    document.getElementById(page).style.display = "none";
+  });
+
+  document.getElementById(id).style.display = "block";
+
+}
+
+function backHome(){
+
+  const pages = [
+    "ringkasan",
+    "keuangan",
+    "igd",
+    "tindakan",
+    "persalinan",
+    "padma"
+  ];
+
+  pages.forEach(page => {
+    document.getElementById(page).style.display = "none";
+  });
+
+  document.getElementById("home").style.display = "flex";
+
+}
+
+</script>
+
+</body>
+</html>
